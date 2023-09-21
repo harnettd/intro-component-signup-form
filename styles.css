@@ -1,0 +1,21 @@
+html {
+  font-size: 62.5%;
+}
+
+* > * {
+  box-sizing: border-box;
+  margin-top: 0;
+}
+
+body {
+  margin: 0;
+}
+
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=styles.css.map */
