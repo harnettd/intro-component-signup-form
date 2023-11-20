@@ -5,10 +5,148 @@ html { font-size: 62.5% }
     margin-top: 0;
 }
 
+$breakpoint: 768px;
+
 body {
-    margin: 0
+    margin: 0;
+    background-color: salmon;
 }
 
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    @media screen and (min-width: $breakpoint) {
+        flex-direction: row;
+        justify-content: center;
+        gap: 5rem;
+        height: 100vh;
+    }
+}
+
+.txt-col {
+    @media screen and (min-width: $breakpoint) {
+        max-width: 50rem;
+    }
+}
+
+.txt-primary {
+    text-align: center;
+
+    @media screen and (min-width: $breakpoint) {
+        text-align: left;
+    }
+}
+
+.txt-secondary {
+    text-align: center;
+
+    @media screen and (min-width: $breakpoint) {
+        text-align: left;
+    }
+}
+
+.form-col {
+
+    &__header-wrapper {
+        margin-bottom: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        width: 100%;
+        text-align: center;
+        border: none;
+        border-radius: 1rem;
+        background-color: purple;
+    }
+
+    &__header {
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    &__header--emph { font-weight: bold; }
+
+}
+
+.sign-up-form {
+    padding: 2rem;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 1rem;
+    background-color: white;
+
+    &__txt-field-wrapper {
+        margin-bottom: 2rem;
+        padding: 1rem 2rem;
+        border: 1px solid black;
+        border-radius: 1rem;
+    }
+
+    &__txt-field-inner {
+        position: relative;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__txt-field-input {
+        width: 100%;
+        border: none;
+        background: none;
+    }
+
+    &__txt-field-label {
+        position: absolute;
+
+        &:hover { cursor: text; }
+
+        &--onclick { display: none; }
+    }
+
+    &__err-icon {
+        display: none;
+        width: 2.4rem;
+        height: auto;
+
+        &--on-err { display: block; }
+    }
+
+    &__err-msg-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -1.5rem;
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+
+    &__err-msg {
+        display: none;
+        color: red;
+    }
+
+    &__err-msg--active { display: block; }
+
+    &__submit-btn {
+        margin-bottom: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        width: 100%;
+        border: none;
+        border-radius: 1rem;
+        color: white;
+        // box-shadow: 0 1rem darkgreen;
+        background-color: green;
+    }
+}
 
 // Footer
 
