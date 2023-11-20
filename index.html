@@ -12,26 +12,95 @@
   <title>Frontend Mentor | Intro component with sign up form</title>
 
   <!-- Local stylesheet -->
-  <link rel="stylesheet" href="./styles.css">
+  <!-- <link rel="stylesheet" href="./styles.css"> -->
+
+  <!-- JQuery -->
+  <!-- <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script> -->
 </head>
 
 <body>
+  <main class="wrapper">
+    <div class="container">
 
-  Learn to code by watching others
+      <div class="txt-col">
+        <h1 class="txt-primary">Learn to code by watching others</h1>
+        <p class="txt-secondary">See how experienced developers solve problems in real-time.
+          Watching scripted tutorials is great, but understanding how developers think is
+          invaluable.</p>
+      </div>
 
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
-  but understanding how developers think is invaluable.
+      <div class="form-col">
 
-  Try it free 7 days then $20/mo. thereafter
+        <div class="form-col__header-wrapper">
+          <span class="form-col__header form-col__header--emph">Try it free 7 days </span>
+          <span class="form-col__header">then $20/mo. thereafter</span>
+        </div>
 
-  First Name
-  Last Name
-  Email Address
-  Password
+        <form id="sign-up-form" class="sign-up-form">
 
-  Claim your free trial
+          <div class="sign-up-form__txt-field-wrapper">
+            <div class="sign-up-form__txt-field-inner">
+              <label class="sign-up-form__txt-field-label" for="first-name">First Name</label>
+              <input id="first-name" class="sign-up-form__txt-field-input" type="text" name="firstName" value="">
+              <img class="sign-up-form__err-icon sign-up-form__err-icon--on-err" src="./images/icon-error.svg"
+                alt="An error icon" width="24" height="24">
+            </div>
+          </div>
 
-  By clicking the button, you are agreeing to our Terms and Services
+          <div class="sign-up-form__err-msg-wrapper">
+            <div class="sign-up-form__err-msg sign-up-form__err-msg--active">Error Message</div>
+          </div>
+
+          <div class="sign-up-form__txt-field-wrapper">
+            <div class="sign-up-form__txt-field-inner">
+              <label class="sign-up-form__txt-field-label" for="last-name">Last Name</label>
+              <input id="last-name" class="sign-up-form__txt-field-input" type="text" name="lastName">
+              <img class="sign-up-form__err-icon" src="./images/icon-error.svg" alt="An error icon" width="24"
+                height="24">
+            </div>
+          </div>
+
+          <div class="sign-up-form__err-msg-wrapper">
+            <div class="sign-up-form__err-msg">Error Message</div>
+          </div>
+
+          <div class="sign-up-form__txt-field-wrapper">
+            <div class="sign-up-form__txt-field-inner">
+              <label class="sign-up-form__txt-field-label" for="email">Email Address</label>
+              <input id="email" class="sign-up-form__txt-field-input" type="email" name="email">
+              <img class="sign-up-form__err-icon" src="./images/icon-error.svg" alt="An error icon" width="24"
+                height="24">
+            </div>
+          </div>
+
+          <div class="sign-up-form__err-msg-wrapper">
+            <div class="sign-up-form__err-msg">Error Message</div>
+          </div>
+
+          <div class="sign-up-form__txt-field-wrapper">
+            <div class="sign-up-form__txt-field-inner">
+              <label class="sign-up-form__txt-field-label" for="password">Password</label>
+              <input id="password" class="sign-up-form__txt-field-input" type="password" name="password">
+              <img class="sign-up-form__err-icon" src="./images/icon-error.svg" alt="An error icon" width="24"
+                height="24">
+            </div>
+          </div>
+
+          <div class="sign-up-form__err-msg-wrapper">
+            <div class="sign-up-form__err-msg">Error Message</div>
+          </div>
+
+          <div>
+            <button class="sign-up-form__submit-btn" type="submit">Claim your free trial</button>
+          </div>
+          <p>By clicking the button, you are agreeing to our Terms and Services</p>
+        </form>
+
+      </div>
+
+    </div>
+  </main>
 
   <!-- <footer>
     <p class="attribution">
@@ -39,6 +108,9 @@
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer> -->
+
+  <!-- <script src="./index.js"></script> -->
+
 </body>
 
 </html>
