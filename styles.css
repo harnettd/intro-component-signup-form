@@ -9,32 +9,36 @@ html {
 
 body {
   margin: 0;
-  background-color: salmon;
+  background-color: yellow;
 }
 
-.wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container {
+.container-flex {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  width: 37.5rem;
 }
 @media screen and (min-width: 768px) {
-  .container {
+  .container-flex {
     flex-direction: row;
     justify-content: center;
     gap: 5rem;
     height: 100vh;
   }
 }
-
+.container-flex__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media screen and (min-width: 768px) {
-  .txt-col {
+  .container-flex__txt-col {
+    max-width: 50rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container-flex__form-col {
     max-width: 50rem;
   }
 }
@@ -57,7 +61,11 @@ body {
   }
 }
 
-.form-col__header-wrapper {
+.call-to-action {
+  font-size: 1.5rem;
+  color: white;
+}
+.call-to-action__wrapper {
   margin-bottom: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -67,67 +75,54 @@ body {
   border-radius: 1rem;
   background-color: purple;
 }
-.form-col__header {
-  font-size: 1.5rem;
-  color: white;
-}
-.form-col__header--emph {
+.call-to-action--emph {
   font-weight: bold;
 }
 
-.sign-up-form {
+.signup-form {
   padding: 2rem;
   width: 100%;
   border: 1px solid black;
   border-radius: 1rem;
   background-color: white;
 }
-.sign-up-form__txt-field-wrapper {
+.signup-form__field {
+  margin-bottom: 1rem;
+}
+.signup-form__input-container-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 2rem;
   padding: 1rem 2rem;
   border: 1px solid black;
   border-radius: 1rem;
 }
-.sign-up-form__txt-field-inner {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.sign-up-form__txt-field-input {
+.signup-form__input {
   width: 100%;
   border: none;
   background: none;
 }
-.sign-up-form__txt-field-label {
-  position: absolute;
-}
-.sign-up-form__txt-field-label--onclick {
-  display: none;
-}
-.sign-up-form__err-icon {
+.signup-form__err-icon {
   display: none;
   width: 2.4rem;
   height: auto;
 }
-.sign-up-form__err-icon--on-err {
+.signup-form__err-icon--on-err {
   display: block;
 }
-.sign-up-form__err-msg-wrapper {
+.signup-form__err-msg-wrapper {
   display: flex;
   justify-content: flex-end;
-  margin-top: -1.5rem;
-  margin-bottom: 2rem;
-  width: 100%;
 }
-.sign-up-form__err-msg {
+.signup-form__err-msg {
   display: none;
   color: red;
 }
-.sign-up-form__err-msg--active {
+.signup-form__err-msg--on-err {
   display: block;
 }
-.sign-up-form__submit-btn {
+.signup-form__submit-btn {
   margin-bottom: 2rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -137,7 +132,6 @@ body {
   color: white;
   background-color: green;
 }
-
 .attribution {
   font-size: 1.1rem;
   text-align: center;

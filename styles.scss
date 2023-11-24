@@ -9,6 +9,12 @@ html {
 
 $breakpoint: 768px;
 
+$font-stack: 'Poppins', sans-serif;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+
 body {
     margin: 0;
     background-color: yellow;
@@ -19,6 +25,8 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    
+    width: 37.5rem;
 
     @media screen and (min-width: $breakpoint) {
         flex-direction: row;
