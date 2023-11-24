@@ -1,4 +1,6 @@
-html { font-size: 62.5% }
+html {
+    font-size: 62.5%;
+}
 
 * > * {
     box-sizing: border-box;
@@ -9,16 +11,10 @@ $breakpoint: 768px;
 
 body {
     margin: 0;
-    background-color: salmon;
+    background-color: yellow;
 }
 
-.wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container {
+.container-flex {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -30,12 +26,24 @@ body {
         gap: 5rem;
         height: 100vh;
     }
-}
-
-.txt-col {
-    @media screen and (min-width: $breakpoint) {
-        max-width: 50rem;
+    
+    &__wrapper {
+        display: flex;
+		justify-content: center;
+		align-items: center;
     }
+    
+    &__txt-col {
+        @media screen and (min-width: $breakpoint) {
+			max-width: 50rem;
+		}
+    }
+    
+    &__form-col {
+        @media screen and (min-width: $breakpoint) {
+			max-width: 50rem;
+		}
+	}
 }
 
 .txt-primary {
@@ -54,9 +62,11 @@ body {
     }
 }
 
-.form-col {
+.call-to-action {
+    font-size: 1.5rem;
+    color: white;
 
-    &__header-wrapper {
+    &__wrapper {
         margin-bottom: 1rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
@@ -67,49 +77,37 @@ body {
         background-color: purple;
     }
 
-    &__header {
-        font-size: 1.5rem;
-        color: white;
+    &--emph {
+        font-weight: bold;
     }
-
-    &__header--emph { font-weight: bold; }
-
 }
 
-.sign-up-form {
+.signup-form {
     padding: 2rem;
     width: 100%;
     border: 1px solid black;
     border-radius: 1rem;
     background-color: white;
 
-    &__txt-field-wrapper {
+	&__field {
+		margin-bottom: 1rem;
+	}
+	
+    &__input-container-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
         margin-bottom: 2rem;
         padding: 1rem 2rem;
         border: 1px solid black;
         border-radius: 1rem;
     }
 
-    &__txt-field-inner {
-        position: relative;
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    &__txt-field-input {
+    &__input {
         width: 100%;
         border: none;
         background: none;
-    }
-
-    &__txt-field-label {
-        position: absolute;
-
-        &:hover { cursor: text; }
-
-        &--onclick { display: none; }
     }
 
     &__err-icon {
@@ -117,23 +115,24 @@ body {
         width: 2.4rem;
         height: auto;
 
-        &--on-err { display: block; }
+        &--on-err {
+            display: block;
+        }
     }
 
     &__err-msg-wrapper {
         display: flex;
         justify-content: flex-end;
-        margin-top: -1.5rem;
-        margin-bottom: 2rem;
-        width: 100%;
     }
-
+    
     &__err-msg {
         display: none;
         color: red;
+        
+        &--on-err {
+            display: block;
+        }
     }
-
-    &__err-msg--active { display: block; }
 
     &__submit-btn {
         margin-bottom: 2rem;
@@ -146,13 +145,23 @@ body {
         // box-shadow: 0 1rem darkgreen;
         background-color: green;
     }
+    
+    &__terms-wrapper {}
+    
+    &__terms {
+    
+      &--emph {}
+    }
+    
 }
 
 // Footer
 
-.attribution { 
-    font-size: 1.1rem; 
-    text-align: center; 
+.attribution {
+    font-size: 1.1rem;
+    text-align: center;
 }
 
-.attribution a { color: hsl(228 45% 44%); }
+.attribution a {
+    color: hsl(228 45% 44%);
+}
