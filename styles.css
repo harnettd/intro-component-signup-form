@@ -1,10 +1,10 @@
-html {
-  font-size: 62.5%;
-}
-
 * > * {
   box-sizing: border-box;
   margin-top: 0;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
@@ -12,12 +12,26 @@ body {
   background-color: salmon;
 }
 
+.container-flex-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 9.1rem 0 3.2rem;
+}
+@media screen and (min-width: 768px) {
+  .container-flex-wrapper {
+    align-items: center;
+    margin: 0 1.6rem;
+    min-height: 100vh;
+  }
+}
+
 .container-flex {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 4.6rem;
+  gap: 6.2rem;
   min-width: 32.8rem;
   width: 32.8rem;
 }
@@ -31,27 +45,17 @@ body {
     width: auto;
   }
 }
-.container-flex__wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin: 9.1rem 0 3.2rem;
-}
+
 @media screen and (min-width: 768px) {
-  .container-flex__wrapper {
-    align-items: center;
-    margin: 0 1.6rem;
-    min-height: 100vh;
-  }
-}
-@media screen and (min-width: 768px) {
-  .container-flex__txt-col {
+  .txt-col {
     padding-top: 17.6rem;
+    padding-right: 1rem;
     width: 51.3%;
   }
 }
+
 @media screen and (min-width: 768px) {
-  .container-flex__form-col {
+  .form-col {
     width: 48.7%;
   }
 }
@@ -60,9 +64,9 @@ body {
   margin-bottom: 2.2rem;
   color: white;
   font-family: "Poppins", sans-serif;
-  font-size: 2.72rem;
+  font-size: 2.75rem;
   font-weight: 700;
-  line-height: 1.33;
+  line-height: 1.31;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
@@ -75,11 +79,12 @@ body {
 }
 
 .txt-secondary {
+  margin-bottom: 0;
   color: white;
   font-family: "Poppins", sans-serif;
-  font-size: 1.58rem;
-  font-weight: 600;
-  line-height: 1.65;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.64;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
@@ -91,7 +96,7 @@ body {
 
 .call-to-action {
   font-family: "Poppins", sans-serif;
-  font-size: 1.55rem;
+  font-size: 1.54rem;
   font-weight: 400;
   color: white;
   line-height: 1.65;
@@ -109,7 +114,7 @@ body {
   border: none;
   border-radius: 1rem;
   background-color: hsl(248, 32%, 49%);
-  box-shadow: 0 0.7rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.7rem hsla(0, 100%, 0%, 0.2);
 }
 @media screen and (min-width: 768px) {
   .call-to-action__wrapper {
@@ -121,11 +126,11 @@ body {
 }
 
 .signup-form {
-  padding: 2.4rem 2.5rem 2.5rem;
+  padding: 2.4rem 2.5rem;
   width: 100%;
   border-radius: 1rem;
   background-color: white;
-  box-shadow: 0 0.7rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.7rem hsla(0, 100%, 0%, 0.2);
 }
 @media screen and (min-width: 768px) {
   .signup-form {
@@ -150,7 +155,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .signup-form__input-container-flex {
-    padding: 1.6rem 3rem 1.5rem;
+    padding: 1.6rem 2.9rem 1.5rem;
   }
 }
 .signup-form__input-container-flex--on-err {
@@ -158,10 +163,10 @@ body {
 }
 .signup-form__input {
   width: 100%;
-  border: none;
   font-family: "Poppins", sans-serif;
   font-size: 1.45rem;
   font-weight: 600;
+  border: none;
 }
 @media screen and (min-width: 768px) {
   .signup-form__input {
@@ -195,21 +200,19 @@ body {
   padding-top: 1.6rem;
   padding-bottom: 1.2rem;
   width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.62rem;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 0.03rem;
   border: none;
   border-radius: 0.5rem;
-  font-family: "Poppins", sans-serif;
-  font-size: 1.65rem;
-  font-weight: 600;
-  color: white;
   background-color: hsl(154, 59%, 51%);
   box-shadow: 0 0.3rem rgba(0, 0, 0, 0.5);
 }
 @media screen and (min-width: 768px) {
   .signup-form__submit-btn {
     margin-bottom: 1.5rem;
-    font-size: 1.62rem;
-    font-weight: 500;
-    letter-spacing: 0.03rem;
   }
 }
 .signup-form__terms-wrapper {
@@ -248,11 +251,11 @@ body {
   }
 }
 
-.container-flex__wrapper {
+.container-flex-wrapper {
   opacity: 0.5;
 }
 @media screen and (min-width: 768px) {
-  .container-flex__wrapper {
+  .container-flex-wrapper {
     align-items: flex-start;
     margin-top: 12rem;
   }
