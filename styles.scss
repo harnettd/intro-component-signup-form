@@ -25,7 +25,7 @@ $grayish-blue: hsl(246 25% 77%);
 
 
 // Generic
-*>* {
+* > * {
     box-sizing: border-box;
     margin-top: 0;
 }
@@ -189,7 +189,7 @@ body {
         border-radius: .5rem;
 
         @media screen and (min-width: $breakpoint) {
-            padding: 1.6rem 2.9rem 1.5rem;
+            padding: 1.6rem 2.5rem 1.5rem 2.9rem;
         }
 
         &--on-err {
@@ -229,11 +229,16 @@ body {
     &__err-msg-wrapper {
         display: flex;
         justify-content: flex-end;
+
+        margin-top: .6rem;
+        margin-bottom: -.1rem;
     }
 
     &__err-msg {
         display: none;
 
+        @include font(1.07rem, $regular);
+        font-style: italic;
         color: red;
 
         &--on-err {
@@ -255,6 +260,10 @@ body {
         border-radius: .5rem;
         background-color: $green;
         box-shadow: 0 .3rem rgba(0, 0, 0, 0.5);
+
+        &:hover {
+            cursor: pointer;
+        }
 
         @media screen and (min-width: $breakpoint) {
             margin-bottom: 1.5rem;
@@ -301,7 +310,7 @@ body {
     }
 
     @media screen and (min-width: $breakpoint) {
-        background-image: url('./design/desktop-design.jpg');
+        background-image: url('./design/active-states.jpg');
     }
 }
 

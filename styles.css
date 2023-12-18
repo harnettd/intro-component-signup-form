@@ -155,7 +155,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .signup-form__input-container-flex {
-    padding: 1.6rem 2.9rem 1.5rem;
+    padding: 1.6rem 2.5rem 1.5rem 2.9rem;
   }
 }
 .signup-form__input-container-flex--on-err {
@@ -187,9 +187,15 @@ body {
 .signup-form__err-msg-wrapper {
   display: flex;
   justify-content: flex-end;
+  margin-top: 0.6rem;
+  margin-bottom: -0.1rem;
 }
 .signup-form__err-msg {
   display: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.07rem;
+  font-weight: 400;
+  font-style: italic;
   color: red;
 }
 .signup-form__err-msg--on-err {
@@ -209,6 +215,9 @@ body {
   border-radius: 0.5rem;
   background-color: hsl(154, 59%, 51%);
   box-shadow: 0 0.3rem rgba(0, 0, 0, 0.5);
+}
+.signup-form__submit-btn:hover {
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .signup-form__submit-btn {
@@ -247,7 +256,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   body {
-    background-image: url("./design/desktop-design.jpg");
+    background-image: url("./design/active-states.jpg");
   }
 }
 
