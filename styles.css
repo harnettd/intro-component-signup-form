@@ -9,7 +9,7 @@ html {
 
 body {
   margin: 0;
-  background-color: salmon;
+  background-color: hsl(0, 100%, 74%);
 }
 
 .container-flex-wrapper {
@@ -62,7 +62,7 @@ body {
 
 .txt-primary {
   margin-bottom: 2.2rem;
-  color: white;
+  color: hsl(0, 100%, 100%);
   font-family: "Poppins", sans-serif;
   font-size: 2.75rem;
   font-weight: 700;
@@ -80,7 +80,7 @@ body {
 
 .txt-secondary {
   margin-bottom: 0;
-  color: white;
+  color: hsl(0, 100%, 100%);
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
   font-weight: 500;
@@ -98,7 +98,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1.54rem;
   font-weight: 400;
-  color: white;
+  color: hsl(0, 100%, 100%);
   line-height: 1.65;
 }
 @media screen and (min-width: 768px) {
@@ -129,7 +129,7 @@ body {
   padding: 2.4rem 2.5rem;
   width: 100%;
   border-radius: 1rem;
-  background-color: white;
+  background-color: hsl(0, 100%, 100%);
   box-shadow: 0 0.7rem hsla(0, 100%, 0%, 0.2);
 }
 @media screen and (min-width: 768px) {
@@ -150,7 +150,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.6rem 1.5rem 1.4rem;
-  border: 0.1rem solid black;
+  border: 0.1rem solid hsl(246, 25%, 77%);
   border-radius: 0.5rem;
 }
 @media screen and (min-width: 768px) {
@@ -196,7 +196,7 @@ body {
   font-size: 1.07rem;
   font-weight: 400;
   font-style: italic;
-  color: red;
+  color: hsl(0, 100%, 74%);
 }
 .signup-form__err-msg--on-err {
   display: block;
@@ -209,14 +209,15 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1.62rem;
   font-weight: 500;
-  color: white;
+  color: hsl(0, 100%, 100%);
   letter-spacing: 0.03rem;
   border: none;
   border-radius: 0.5rem;
   background-color: hsl(154, 59%, 51%);
-  box-shadow: 0 0.3rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.3rem hsl(153, 49%, 47%);
 }
 .signup-form__submit-btn:hover {
+  background-color: hsla(154, 59%, 51%, 0.8);
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
@@ -247,25 +248,4 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
-
-body {
-  background-image: url("./design/mobile-design.jpg");
-  background-position: left top;
-  background-repeat: no-repeat;
-}
-@media screen and (min-width: 768px) {
-  body {
-    background-image: url("./design/active-states.jpg");
-  }
-}
-
-.container-flex-wrapper {
-  opacity: 0.5;
-}
-@media screen and (min-width: 768px) {
-  .container-flex-wrapper {
-    align-items: flex-start;
-    margin-top: 12rem;
-  }
 }/*# sourceMappingURL=styles.css.map */
