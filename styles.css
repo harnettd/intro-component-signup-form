@@ -25,34 +25,34 @@ body {
   .container-flex {
     flex-direction: row;
     justify-content: center;
-    margin: 0 2.4rem;
-    max-width: 110rem;
+    align-items: flex-start;
+    gap: 0;
+    max-width: 111rem;
     width: auto;
-    height: 100vh;
   }
 }
 .container-flex__wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin: 9.1rem 0 3.2rem;
 }
-.container-flex__txt-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+@media screen and (min-width: 768px) {
+  .container-flex__wrapper {
+    align-items: center;
+    margin: 0 1.6rem;
+    min-height: 100vh;
+  }
 }
 @media screen and (min-width: 768px) {
   .container-flex__txt-col {
-    justify-content: center;
-    align-items: flex-start;
-    width: 50%;
+    padding-top: 17.6rem;
+    width: 51.3%;
   }
 }
 @media screen and (min-width: 768px) {
   .container-flex__form-col {
-    width: 50%;
+    width: 48.7%;
   }
 }
 
@@ -67,7 +67,10 @@ body {
 }
 @media screen and (min-width: 768px) {
   .txt-primary {
+    margin-bottom: 3rem;
+    font-size: 4.9rem;
     text-align: left;
+    line-height: 1.1;
   }
 }
 
@@ -81,6 +84,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .txt-secondary {
+    font-size: 1.58rem;
     text-align: left;
   }
 }
@@ -88,9 +92,14 @@ body {
 .call-to-action {
   font-family: "Poppins", sans-serif;
   font-size: 1.55rem;
-  font-weight: 500;
+  font-weight: 400;
   color: white;
   line-height: 1.65;
+}
+@media screen and (min-width: 768px) {
+  .call-to-action {
+    font-size: 1.53rem;
+  }
 }
 .call-to-action__wrapper {
   margin-bottom: 2.4rem;
@@ -101,6 +110,11 @@ body {
   border-radius: 1rem;
   background-color: hsl(248, 32%, 49%);
   box-shadow: 0 0.7rem rgba(0, 0, 0, 0.5);
+}
+@media screen and (min-width: 768px) {
+  .call-to-action__wrapper {
+    padding-bottom: 1.5rem;
+  }
 }
 .call-to-action--emph {
   font-weight: 700;
@@ -113,8 +127,18 @@ body {
   background-color: white;
   box-shadow: 0 0.7rem rgba(0, 0, 0, 0.5);
 }
+@media screen and (min-width: 768px) {
+  .signup-form {
+    padding: 4.1rem;
+  }
+}
 .signup-form__field {
   margin-bottom: 1.6rem;
+}
+@media screen and (min-width: 768px) {
+  .signup-form__field {
+    margin-bottom: 2rem;
+  }
 }
 .signup-form__input-container-flex {
   display: flex;
@@ -123,6 +147,11 @@ body {
   padding: 1.6rem 1.5rem 1.4rem;
   border: 0.1rem solid black;
   border-radius: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .signup-form__input-container-flex {
+    padding: 1.6rem 3rem 1.5rem;
+  }
 }
 .signup-form__input-container-flex--on-err {
   border-color: hsl(0, 100%, 74%);
@@ -133,6 +162,11 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1.45rem;
   font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .signup-form__input {
+    font-size: 1.43rem;
+  }
 }
 .signup-form__input--on-err {
   color: hsl(0, 100%, 74%);
@@ -157,18 +191,26 @@ body {
   display: block;
 }
 .signup-form__submit-btn {
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.1rem;
   padding-top: 1.6rem;
   padding-bottom: 1.2rem;
   width: 100%;
   border: none;
   border-radius: 0.5rem;
-  box-shadow: 0 0.3rem rgba(0, 0, 0, 0.5);
   font-family: "Poppins", sans-serif;
   font-size: 1.65rem;
   font-weight: 600;
   color: white;
   background-color: hsl(154, 59%, 51%);
+  box-shadow: 0 0.3rem rgba(0, 0, 0, 0.5);
+}
+@media screen and (min-width: 768px) {
+  .signup-form__submit-btn {
+    margin-bottom: 1.5rem;
+    font-size: 1.62rem;
+    font-weight: 500;
+    letter-spacing: 0.03rem;
+  }
 }
 .signup-form__terms-wrapper {
   padding: 0 1.5rem;
@@ -177,11 +219,12 @@ body {
 .signup-form__terms {
   font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 400;
   color: hsl(246, 25%, 77%);
   line-height: 1.94;
 }
 .signup-form__terms--emph {
+  font-weight: 600;
   color: hsl(0, 100%, 74%);
 }
 
@@ -199,7 +242,18 @@ body {
   background-position: left top;
   background-repeat: no-repeat;
 }
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url("./design/desktop-design.jpg");
+  }
+}
 
 .container-flex__wrapper {
   opacity: 0.5;
+}
+@media screen and (min-width: 768px) {
+  .container-flex__wrapper {
+    align-items: flex-start;
+    margin-top: 12rem;
+  }
 }/*# sourceMappingURL=styles.css.map */

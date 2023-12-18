@@ -47,38 +47,38 @@ body {
     @media screen and (min-width: $breakpoint) {
         flex-direction: row;
         justify-content: center;
+        align-items: flex-start;
+        gap: 0;
         
-        margin: 0 2.4rem;
-        max-width: 110rem;
+        max-width: 111rem;
         width: auto;
-        height: 100vh;
     }
     
     &__wrapper {
         display: flex;
 		justify-content: center;
-		align-items: center;
+        align-items: flex-start;
 
         margin: 9.1rem 0 3.2rem;
+
+        @media screen and (min-width: $breakpoint) {
+            align-items: center;
+            margin: 0 1.6rem;
+            min-height: 100vh;
+        }
     }
     
     &__txt-col {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
 
         @media screen and (min-width: $breakpoint) {
-            justify-content: center;
-            align-items: flex-start;
-
-			width: 50%;
+            padding-top: 17.6rem;
+			width: 51.3%;
 		}
     }
     
     &__form-col {
         @media screen and (min-width: $breakpoint) {
-			width: 50%;
+			width: 48.7%;
 		}
 	}
 }
@@ -92,7 +92,12 @@ body {
     text-align: center;
 
     @media screen and (min-width: $breakpoint) {
+        margin-bottom: 3rem;
+        
+        font-size: 4.9rem;
         text-align: left;
+        line-height: 1.1;
+
     }
 }
 
@@ -103,14 +108,19 @@ body {
     text-align: center;
 
     @media screen and (min-width: $breakpoint) {
+        font-size: 1.58rem;
         text-align: left;
     }
 }
 
 .call-to-action {
-    @include font(1.55rem, $medium);
+    @include font(1.55rem, $regular);
     color: white;
     line-height: 1.65;
+
+    @media screen and (min-width: $breakpoint) {
+        font-size: 1.53rem;
+    }
 
     &__wrapper {
         margin-bottom: 2.4rem;
@@ -122,6 +132,10 @@ body {
         border-radius: 1rem;
         background-color: $blue;
         box-shadow: 0 0.7rem rgba(0, 0, 0, 0.5);
+
+        @media screen and (min-width: $breakpoint) {
+            padding-bottom: 1.5rem;
+        }
     }
 
     &--emph {
@@ -137,8 +151,16 @@ body {
     background-color: white;
     box-shadow: 0 0.7rem rgba(0, 0, 0, 0.5);
 
+    @media screen and (min-width: $breakpoint) {
+        padding: 4.1rem;
+    }
+
 	&__field {
 		margin-bottom: 1.6rem;
+
+        @media screen and (min-width: $breakpoint) {
+            margin-bottom: 2rem;
+        }
 	}
 	
     &__input-container-flex {
@@ -149,6 +171,10 @@ body {
         padding: 1.6rem 1.5rem 1.4rem;
         border: .1rem solid black;
         border-radius: .5rem;
+
+        @media screen and (min-width: $breakpoint) {
+            padding: 1.6rem 3rem 1.5rem;
+        }
 
         &--on-err {
             border-color: $red;
@@ -161,6 +187,10 @@ body {
     
         @include font(1.45rem, $semi-bold);
 
+        @media screen and (min-width: $breakpoint) {
+            font-size: 1.43rem;
+        }
+
         &--on-err {
             color: $red;
         }
@@ -170,6 +200,8 @@ body {
         display: none;
         width: 2.4rem;
         height: auto;
+
+        @media screen and (min-width: $breakpoint) {}
 
         &--on-err {
             display: block;
@@ -191,32 +223,44 @@ body {
     }
 
     &__submit-btn {
-        margin-bottom: .8rem;
+        margin-bottom: 1.1rem;
         padding-top: 1.6rem;
         padding-bottom: 1.2rem;
         width: 100%;
         border: none;
         border-radius: .5rem;
 
-        box-shadow: 0 .3rem rgba(0, 0, 0, 0.5);
-
         @include font(1.65rem, $semi-bold);
         color: white;
         background-color: $green;
+        box-shadow: 0 .3rem rgba(0, 0, 0, 0.5);
+        
+        @media screen and (min-width: $breakpoint) {
+            margin-bottom: 1.5rem;
+
+            font-size: 1.62rem;
+            font-weight: $medium;
+            letter-spacing: .03rem;
+        }
     }
     
     &__terms-wrapper {
         padding: 0 1.5rem;
 
         text-align: center;
+
+        @media screen and (min-width: $breakpoint) {}
     }
     
     &__terms {
-        @include font(1.1rem, $semi-bold);
+        @include font(1.1rem, $regular);
         color: $grayish-blue;
         line-height: 1.94;
+
+        @media screen and (min-width: $breakpoint) {}
     
       &--emph {
+        font-weight: $semi-bold;
         color: $red;
       }
     }
@@ -242,8 +286,17 @@ body {
         position: left top;
         repeat: no-repeat;
     }
+
+    @media screen and (min-width: $breakpoint) {
+        background-image: url('./design/desktop-design.jpg');
+    }
 }
 
 .container-flex__wrapper {
     opacity: 0.5;
+
+    @media screen and (min-width: $breakpoint) {
+        align-items: flex-start;
+        margin-top: 12rem;
+    }
 }
