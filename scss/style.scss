@@ -1,0 +1,57 @@
+@import "vars";
+
+
+// Base styles
+
+html {
+    font-size: 62.5%;
+}
+
+* > * {
+    box-sizing: border-box;
+    margin-top: 0;
+}
+
+// TODO: add background
+body {
+    margin: 0;
+    background-color: $salmon;
+}
+
+
+// Layout styles
+
+@import "container-flex";
+
+
+// Blocks
+
+@import "introduction";
+@import "offer";
+@import "signup-form";
+@import "attribution";
+
+
+// Development run-level
+
+
+// body {
+//     background: {
+//         image: url('./design/mobile-design.jpg');
+//         position: left top;
+//         repeat: no-repeat;
+//     }
+
+//     @media screen and (min-width: $breakpoint) {
+//         background-image: url('./design/active-states.jpg');
+//     }
+// }
+
+// .container-flex-wrapper {
+//     opacity: 0.5;
+
+//     @media screen and (min-width: $breakpoint) {
+//         align-items: flex-start;
+//         margin-top: 12rem;
+//     }
+// }

@@ -1,29 +1,15 @@
+html {
+  font-size: 62.5%;
+}
+
 * > * {
   box-sizing: border-box;
   margin-top: 0;
 }
 
-html {
-  font-size: 62.5%;
-}
-
 body {
   margin: 0;
   background-color: hsl(0, 100%, 74%);
-}
-
-.container-flex-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin: 9.1rem 0 3.2rem;
-}
-@media screen and (min-width: 768px) {
-  .container-flex-wrapper {
-    align-items: center;
-    margin: 0 1.6rem;
-    min-height: 100vh;
-  }
 }
 
 .container-flex {
@@ -45,12 +31,24 @@ body {
     width: auto;
   }
 }
-
-.txt-col {
+.container-flex__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 9.1rem 0 3.2rem;
+}
+@media screen and (min-width: 768px) {
+  .container-flex__wrapper {
+    align-items: center;
+    margin: 0 1.6rem;
+    min-height: 100vh;
+  }
+}
+.container-flex__txt-col {
   display: block;
 }
 @media screen and (min-width: 768px) {
-  .txt-col {
+  .container-flex__txt-col {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,14 +58,13 @@ body {
     height: 100%;
   }
 }
-
 @media screen and (min-width: 768px) {
-  .form-col {
+  .container-flex__signup-col {
     width: 48.7%;
   }
 }
 
-.txt-primary {
+.introduction__heading {
   margin-bottom: 2.2rem;
   color: hsl(0, 100%, 100%);
   font-family: "Poppins", sans-serif;
@@ -77,15 +74,14 @@ body {
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  .txt-primary {
+  .introduction__heading {
     margin-bottom: 3rem;
     font-size: 4.9rem;
     text-align: left;
     line-height: 1.1;
   }
 }
-
-.txt-secondary {
+.introduction__copy {
   margin-bottom: 0;
   color: hsl(0, 100%, 100%);
   font-family: "Poppins", sans-serif;
@@ -95,13 +91,13 @@ body {
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  .txt-secondary {
+  .introduction__copy {
     font-size: 1.58rem;
     text-align: left;
   }
 }
 
-.call-to-action {
+.offer {
   font-family: "Poppins", sans-serif;
   font-size: 1.54rem;
   font-weight: 400;
@@ -109,11 +105,11 @@ body {
   line-height: 1.65;
 }
 @media screen and (min-width: 768px) {
-  .call-to-action {
+  .offer {
     font-size: 1.53rem;
   }
 }
-.call-to-action__wrapper {
+.offer__wrapper {
   margin-bottom: 2.4rem;
   padding: 2rem 5rem 1.7rem;
   width: 100%;
@@ -124,11 +120,11 @@ body {
   box-shadow: 0 0.7rem hsla(0, 100%, 0%, 0.2);
 }
 @media screen and (min-width: 768px) {
-  .call-to-action__wrapper {
+  .offer__wrapper {
     padding-bottom: 1.5rem;
   }
 }
-.call-to-action--emph {
+.offer--emph {
   font-weight: 700;
 }
 
@@ -257,17 +253,4 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
-body {
-  background-image: url("./design/mobile-design.jpg");
-  background-position: left top;
-  background-repeat: no-repeat;
-}
-@media screen and (min-width: 768px) {
-  body {
-    background-image: url("./design/active-states.jpg");
-  }
-}
-
-.container-flex-wrapper {
-  opacity: 0.5;
-}/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=style.css.map */

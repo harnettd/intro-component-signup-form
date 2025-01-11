@@ -1,0 +1,32 @@
+.introduction {
+  &__heading {
+    margin-bottom: 2.2rem;
+
+    color: $white;
+    @include font(2.75rem, $bold);
+    line-height: 1.31;
+    text-align: center;
+
+    @media screen and (min-width: $breakpoint) {
+      margin-bottom: 3rem;
+
+      font-size: 4.9rem;
+      text-align: left;
+      line-height: 1.1;
+    }
+  }
+
+  &__copy {
+    margin-bottom: 0;
+
+    color: $white;
+    @include font(1.6rem, $medium);
+    line-height: 1.64;
+    text-align: center;
+
+    @media screen and (min-width: $breakpoint) {
+      font-size: 1.58rem;
+      text-align: left;
+    }
+  }
+}
