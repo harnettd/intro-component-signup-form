@@ -12,7 +12,7 @@ $green: hsla(154 59% 51% / 1);
 $green-hover: hsla(154 59% 51% / 0.8);
 $blue: hsla(248 32% 49% / 1);
 $dark-blue: hsla(249 10% 26% / 1 );
-$grayish-blue: hsla(246 25% 77% /1 );
+$grayish-blue: hsla(246 25% 77% / 1 );
 $salmon: hsla(0 100% 74% / 1);
 $black: hsla(0 100% 0 / 1);
 $white: hsla(0 100% 100% / 1);
@@ -42,7 +42,7 @@ html {
     font-size: 62.5%;
 }
 
-
+// TODO: add background
 body {
     margin: 0;
     background-color: $salmon;
@@ -86,11 +86,20 @@ body {
     }
 }
 
+// TODO: center text within txt-col
 .txt-col {
+    display: block;
+
     @media screen and (min-width: $breakpoint) {
-        padding-top: 17.6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        // padding-top: 17.6rem;
         padding-right: 1rem;
         width: 51.3%;
+        height: 100%;
     }
 }
 
@@ -235,9 +244,6 @@ body {
     &__err-msg-wrapper {
         display: flex;
         justify-content: flex-end;
-
-        margin-top: .6rem;
-        margin-bottom: -.1rem;
     }
 
     &__err-msg {
@@ -249,6 +255,9 @@ body {
 
         &--on-err {
             display: block;
+
+            margin-top: .6rem;
+            margin-bottom: -.1rem;
         }
     }
 
@@ -309,23 +318,23 @@ body {
 
 // Dev
 
-// body {
-//     background: {
-//         image: url('./design/mobile-design.jpg');
-//         position: left top;
-//         repeat: no-repeat;
-//     }
+body {
+    background: {
+        image: url('./design/mobile-design.jpg');
+        position: left top;
+        repeat: no-repeat;
+    }
 
-//     @media screen and (min-width: $breakpoint) {
-//         background-image: url('./design/active-states.jpg');
-//     }
-// }
+    @media screen and (min-width: $breakpoint) {
+        background-image: url('./design/active-states.jpg');
+    }
+}
 
-// .container-flex-wrapper {
-//     opacity: 0.5;
+.container-flex-wrapper {
+    opacity: 0.5;
 
-//     @media screen and (min-width: $breakpoint) {
-//         align-items: flex-start;
-//         margin-top: 12rem;
-//     }
-// }
+    // @media screen and (min-width: $breakpoint) {
+    //     align-items: flex-start;
+    //     margin-top: 12rem;
+    // }
+}

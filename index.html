@@ -1,125 +1,177 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
 
-<head>
-	<meta charset="utf-8">
+    <!-- displays site properly based on user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<!-- displays site properly based on user's device -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Intro component with sign up form</title>
 
-	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-	<title>Frontend Mentor | Intro component with sign up form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Local stylesheet -->
+    <link rel="stylesheet" href="./styles.css" />
 
-	<!-- Local stylesheet -->
-	<link rel="stylesheet" href="./styles.css">
-
-	<!-- JQuery -->
-	<!-- <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    <!-- JQuery -->
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script> -->
-</head>
+  </head>
 
-<body>
-	<main class="container-flex-wrapper">
-		<div class="container-flex">
+  <body>
+    <main class="container-flex-wrapper">
+      <div class="container-flex">
+        <div class="txt-col">
+          <h1 class="txt-primary">Learn to code by watching others</h1>
+          <p class="txt-secondary">
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
+        </div>
 
-			<div class="txt-col">
-				<h1 class="txt-primary">Learn to code by watching others</h1>
-				<p class="txt-secondary">See how experienced developers solve problems in real-time.
-					Watching scripted tutorials is great, but understanding how developers think is
-					invaluable.</p>
-			</div>
+        <div class="form-col">
+          <div class="call-to-action__wrapper">
+            <span class="call-to-action call-to-action--emph"
+              >Try it free 7 days
+            </span>
+            <span class="call-to-action">then $20/mo. thereafter</span>
+          </div>
 
-			<div class="form-col">
+          <form id="signup-form" class="signup-form">
+            <div class="signup-form__field">
+              <div class="signup-form__input-container-flex">
+                <input
+                  id="first-name"
+                  class="signup-form__input"
+                  type="text"
+                  placeholder="First Name"
+                  name="firstName"
+                  value=""
+                />
+                <img
+                  class="signup-form__err-icon"
+                  src="./images/icon-error.svg"
+                  alt="An error icon"
+                  width="24"
+                  height="24"
+                />
+              </div>
+              <div class="signup-form__err-msg-wrapper">
+                <div class="signup-form__err-msg">
+                  First Name cannot be empty
+                </div>
+              </div>
+            </div>
 
-				<div class="call-to-action__wrapper">
-					<span class="call-to-action call-to-action--emph">Try it free 7 days </span>
-					<span class="call-to-action">then $20/mo. thereafter</span>
-				</div>
+            <div class="signup-form__field">
+              <div class="signup-form__input-container-flex">
+                <input
+                  id="last-name"
+                  class="signup-form__input"
+                  type="text"
+                  placeholder="Last Name"
+                  name="lastName"
+                  value=""
+                />
+                <img
+                  class="signup-form__err-icon"
+                  src="./images/icon-error.svg"
+                  alt="An error icon"
+                  width="24"
+                  height="24"
+                />
+              </div>
+              <div class="signup-form__err-msg-wrapper">
+                <div class="signup-form__err-msg">
+                  Last Name cannot be empty
+                </div>
+              </div>
+            </div>
 
-				<form id="signup-form" class="signup-form">
+            <div class="signup-form__field">
+              <div class="signup-form__input-container-flex">
+                <input
+                  id="email-address"
+                  class="signup-form__input"
+                  type="text"
+                  placeholder="Email Address"
+                  name="emailAddress"
+                  value=""
+                />
+                <img
+                  class="signup-form__err-icon"
+                  src="./images/icon-error.svg"
+                  alt="An error icon"
+                  width="24"
+                  height="24"
+                />
+              </div>
+              <div class="signup-form__err-msg-wrapper">
+                <div class="signup-form__err-msg">
+                  Looks like this is not an email
+                </div>
+              </div>
+            </div>
 
-					<div class="signup-form__field">
-						<div class="signup-form__input-container-flex">
-							<input id="first-name" class="signup-form__input" type="text"
-								placeholder="First Name" name="firstName" value="">
-							<img class="signup-form__err-icon"
-								src="./images/icon-error.svg" alt="An error icon" width="24" height="24">
-						</div>
-						<div class="signup-form__err-msg-wrapper">
-							<div class="signup-form__err-msg">
-								First Name cannot be empty
-							</div>
-						</div>
-					</div>
+            <div class="signup-form__field">
+              <div class="signup-form__input-container-flex">
+                <input
+                  id="password"
+                  class="signup-form__input"
+                  type="text"
+                  placeholder="Password"
+                  name="password"
+                  value=""
+                />
+                <img
+                  class="signup-form__err-icon"
+                  src="./images/icon-error.svg"
+                  alt="An error icon"
+                  width="24"
+                  height="24"
+                />
+              </div>
+              <div class="signup-form__err-msg-wrapper">
+                <div class="signup-form__err-msg">Password cannot be empty</div>
+              </div>
+            </div>
 
-					<div class="signup-form__field">
-						<div class="signup-form__input-container-flex">
-							<input id="last-name" class="signup-form__input" type="text" placeholder="Last Name"
-								name="lastName" value="">
-							<img class="signup-form__err-icon"
-								src="./images/icon-error.svg" alt="An error icon" width="24" height="24">
-						</div>
-						<div class="signup-form__err-msg-wrapper">
-							<div class="signup-form__err-msg">
-								Last Name cannot be empty
-							</div>
-						</div>
-					</div>
+            <button class="signup-form__submit-btn" type="submit">
+              CLAIM YOUR FREE TRIAL
+            </button>
 
-					<div class="signup-form__field">
-						<div class="signup-form__input-container-flex">
-							<input id="email-address" class="signup-form__input" type="text"
-								placeholder="Email Address" name="emailAddress" value="">
-							<img class="signup-form__err-icon"
-								src="./images/icon-error.svg" alt="An error icon" width="24" height="24">
-						</div>
-						<div class="signup-form__err-msg-wrapper">
-							<div class="signup-form__err-msg">
-								Looks like this is not an email
-							</div>
-						</div>
-					</div>
+            <div class="signup-form__terms-wrapper">
+              <span class="signup-form__terms"
+                >By clicking the button, you are agreeing to our</span
+              >
+              <span class="signup-form__terms signup-form__terms--emph"
+                >Terms and Services</span
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
 
-					<div class="signup-form__field">
-						<div class="signup-form__input-container-flex">
-							<input id="password" class="signup-form__input" type="text" placeholder="Password"
-								name="password" value="">
-							<img class="signup-form__err-icon"
-								src="./images/icon-error.svg" alt="An error icon" width="24" height="24">
-						</div>
-						<div class="signup-form__err-msg-wrapper">
-							<div class="signup-form__err-msg">
-								Password cannot be empty
-							</div>
-						</div>
-					</div>
-
-					<button class="signup-form__submit-btn" type="submit">CLAIM YOUR FREE TRIAL</button>
-
-					<div class="signup-form__terms-wrapper">
-						<span class="signup-form__terms">By clicking the button, you are agreeing to our</span>
-						<span class="signup-form__terms signup-form__terms--emph">Terms and Services</span>
-					</div>
-				</form>
-
-			</div>
-
-		</div>
-	</main>
-
-	<!-- <footer>
+    <!-- <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer> -->
 
-	<script src="./signup-form.js"></script>
-
-</body>
-
+    <script src="./signup-form.js"></script>
+  </body>
 </html>

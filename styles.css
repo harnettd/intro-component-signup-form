@@ -46,11 +46,18 @@ body {
   }
 }
 
+.txt-col {
+  display: block;
+}
 @media screen and (min-width: 768px) {
   .txt-col {
-    padding-top: 17.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     padding-right: 1rem;
     width: 51.3%;
+    height: 100%;
   }
 }
 
@@ -187,8 +194,6 @@ body {
 .signup-form__err-msg-wrapper {
   display: flex;
   justify-content: flex-end;
-  margin-top: 0.6rem;
-  margin-bottom: -0.1rem;
 }
 .signup-form__err-msg {
   display: none;
@@ -200,6 +205,8 @@ body {
 }
 .signup-form__err-msg--on-err {
   display: block;
+  margin-top: 0.6rem;
+  margin-bottom: -0.1rem;
 }
 .signup-form__submit-btn {
   margin-bottom: 1.1rem;
@@ -248,4 +255,19 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+body {
+  background-image: url("./design/mobile-design.jpg");
+  background-position: left top;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url("./design/active-states.jpg");
+  }
+}
+
+.container-flex-wrapper {
+  opacity: 0.5;
 }/*# sourceMappingURL=styles.css.map */
