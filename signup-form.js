@@ -50,10 +50,9 @@ const removeOnErr = (input) => {
 
 // Return true if email is a valid email address; false otherwise.
 const isValidEmail = (email) => {
-  if (email.indexOf('@') === -1) {
-    return false
-  }
-  if (email.indexOf('@') !== email.lastIndexOf('@')) {
+  const emailRegexp = /^\w+(\.\w+)*@\w+(\.\w+)*$/g
+  console.log(email.match(emailRegexp))
+  if (email.match(emailRegexp) === null) {
     return false
   }
   return true
