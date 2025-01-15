@@ -5,31 +5,35 @@
   align-items: center;
   gap: 6.2rem;
 
+  margin: 9rem 0 7rem;
   min-width: 32.8rem;
   width: 32.8rem;
 
   @media screen and (min-width: $breakpoint) {
     flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
     gap: 0;
 
-    max-width: 111rem;
-    width: auto;
+    margin: 0;
+    // max-width: 111rem;
+    // width: auto;
+    width: 111rem;
   }
 
   &__wrapper {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: flex-start;
 
-    margin: 9.1rem 0 3.2rem;
+    // margin: 1.1rem 0 3.2rem;
+    min-height: 100vh;
 
     @media screen and (min-width: $breakpoint) {
       align-items: center;
 
-      margin: 0 1.6rem;
-      min-height: 100vh;
+      // margin: 0 1.6rem;
     }
   }
 
@@ -38,21 +42,21 @@
     display: block;
 
     @media screen and (min-width: $breakpoint) {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      // align-items: flex-start;
 
       // padding-top: 17.6rem;
-      padding-right: 1rem;
-      width: 51.3%;
-      height: 100%;
+      // padding-right: 1rem;
+      max-width: 50rem;
+      // height: 100%;
     }
   }
 
   &__signup-col {
     @media screen and (min-width: $breakpoint) {
-      width: 48.7%;
+      width: 54rem;
     }
   }
 }

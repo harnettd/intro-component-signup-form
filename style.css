@@ -18,30 +18,30 @@ body {
   justify-content: flex-start;
   align-items: center;
   gap: 6.2rem;
+  margin: 9rem 0 7rem;
   min-width: 32.8rem;
   width: 32.8rem;
 }
 @media screen and (min-width: 768px) {
   .container-flex {
     flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
     gap: 0;
-    max-width: 111rem;
-    width: auto;
+    margin: 0;
+    width: 111rem;
   }
 }
 .container-flex__wrapper {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  margin: 9.1rem 0 3.2rem;
+  min-height: 100vh;
 }
 @media screen and (min-width: 768px) {
   .container-flex__wrapper {
     align-items: center;
-    margin: 0 1.6rem;
-    min-height: 100vh;
   }
 }
 .container-flex__txt-col {
@@ -49,18 +49,12 @@ body {
 }
 @media screen and (min-width: 768px) {
   .container-flex__txt-col {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding-right: 1rem;
-    width: 51.3%;
-    height: 100%;
+    max-width: 50rem;
   }
 }
 @media screen and (min-width: 768px) {
   .container-flex__signup-col {
-    width: 48.7%;
+    width: 54rem;
   }
 }
 
@@ -76,6 +70,7 @@ body {
 @media screen and (min-width: 768px) {
   .introduction__heading {
     margin-bottom: 3rem;
+    margin-top: 1rem;
     font-size: 4.9rem;
     text-align: left;
     line-height: 1.1;
@@ -92,7 +87,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .introduction__copy {
-    font-size: 1.58rem;
+    font-size: 1.59rem;
     text-align: left;
   }
 }
@@ -111,7 +106,7 @@ body {
 }
 .offer__wrapper {
   margin-bottom: 2.4rem;
-  padding: 2rem 5rem 1.7rem;
+  padding: 2rem 8rem 1.7rem;
   width: 100%;
   text-align: center;
   border: none;
@@ -251,6 +246,23 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+body {
+  background-image: url("./design/mobile-design.jpg");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: auto;
+  opacity: 1;
+}
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url("./design/desktop-design.jpg");
+  }
+}
+
+.container-flex {
+  margin-top: 0rem;
 }
 
 /*# sourceMappingURL=style.css.map */

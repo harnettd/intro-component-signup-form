@@ -34,24 +34,21 @@ body {
 
 // Development run-level
 
+body {
+    background: {
+        image: url('./design/mobile-design.jpg');
+        position: left top;
+        repeat: no-repeat;
+        size: auto;
+    }
+    opacity: 1;
 
-// body {
-//     background: {
-//         image: url('./design/mobile-design.jpg');
-//         position: left top;
-//         repeat: no-repeat;
-//     }
+    @media screen and (min-width: $breakpoint) {
+        background-image: url('./design/desktop-design.jpg');
+        // background-image: url('./design/active-states.jpg');
+    }
+}
 
-//     @media screen and (min-width: $breakpoint) {
-//         background-image: url('./design/active-states.jpg');
-//     }
-// }
-
-// .container-flex-wrapper {
-//     opacity: 0.5;
-
-//     @media screen and (min-width: $breakpoint) {
-//         align-items: flex-start;
-//         margin-top: 12rem;
-//     }
-// }
+.container-flex {
+    margin-top: 0rem;
+}
