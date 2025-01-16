@@ -13,11 +13,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 0;
+    gap: 2rem;
 
-    margin: 0;
-    // max-width: 111rem;
-    // width: auto;
+    margin: 0 2rem;
     width: 111rem;
   }
 
@@ -27,36 +25,22 @@
     justify-content: center;
     align-items: flex-start;
 
-    // margin: 1.1rem 0 3.2rem;
     min-height: 100vh;
 
     @media screen and (min-width: $breakpoint) {
       align-items: center;
-
-      // margin: 0 1.6rem;
     }
   }
 
-  // TODO: center text within txt-col
   &__txt-col {
-    display: block;
-
     @media screen and (min-width: $breakpoint) {
-      // display: flex;
-      // flex-direction: column;
-      // justify-content: center;
-      // align-items: flex-start;
-
-      // padding-top: 17.6rem;
-      // padding-right: 1rem;
       max-width: 50rem;
-      // height: 100%;
     }
   }
 
   &__signup-col {
     @media screen and (min-width: $breakpoint) {
-      width: 54rem;
+      max-width: 54rem;
     }
   }
 }
