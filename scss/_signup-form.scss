@@ -1,130 +1,143 @@
 .signup-form {
-    padding: 2.4rem 2.5rem;
-    width: 100%;
-    
-    border-radius: 1rem;
-    background-color: $white;
-    box-shadow: 0 0.7rem $box-shadow-black;
+  padding: 2.4rem 2.5rem;
+  width: 100%;
+
+  border-radius: 1rem;
+  background-color: $white;
+  box-shadow: 0 0.7rem $box-shadow-black;
+
+  @media screen and (min-width: $breakpoint) {
+    padding: 4.1rem;
+  }
+
+  &__field {
+    margin-bottom: 1.6rem;
 
     @media screen and (min-width: $breakpoint) {
-        padding: 4.1rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__input-container-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 0.1rem solid $grayish-blue;
+    padding: 1.6rem 1.5rem 1.4rem;
+    border-radius: 0.5rem;
+
+    @media screen and (min-width: $breakpoint) {
+      padding: 1.6rem 2.5rem 1.5rem 2.9rem;
     }
 
-    &__field {
-        margin-bottom: 1.6rem;
-
-        @media screen and (min-width: $breakpoint) {
-            margin-bottom: 2rem;
-        }
+    &--subfocus {
+      border-color: $black;
     }
 
-    &__input-container-flex {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    &--on-err {
+      border-color: $red;
+    }
+  }
 
-        padding: 1.6rem 1.5rem 1.4rem;
-        border: .1rem solid $grayish-blue;
-        border-radius: .5rem;
+  &__input {
+    border: none;
+    width: 100%;
 
-        @media screen and (min-width: $breakpoint) {
-            padding: 1.6rem 2.5rem 1.5rem 2.9rem;
-        }
+    @include font(1.45rem, $semi-bold);
+    // color: $black;
 
-        &--on-err {
-            border-color: $red;
-        }
+    @media screen and (min-width: $breakpoint) {
+      font-size: 1.43rem;
     }
 
-    &__input {
-        width: 100%;
-
-        @include font(1.45rem, $semi-bold);
-
-        border: none;
-
-        @media screen and (min-width: $breakpoint) {
-            font-size: 1.43rem;
-        }
-
-        &--on-err {
-            color: $red;
-        }
+    &:focus-visible {
+      outline: none;
     }
 
-    &__err-icon {
-        display: none;
+    &--on-err {
+      color: $red;
+    }
+  }
 
-        width: 2.4rem;
-        height: auto;
+  &__err-icon {
+    display: none;
 
-        @media screen and (min-width: $breakpoint) {}
+    width: 2.4rem;
+    height: auto;
 
-        &--on-err {
-            display: block;
-        }
+    @media screen and (min-width: $breakpoint) {
     }
 
-    &__err-msg-wrapper {
-        display: flex;
-        justify-content: flex-end;
+    &--on-err {
+      display: block;
+    }
+  }
+
+  &__err-msg-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__err-msg {
+    display: none;
+
+    @include font(1.07rem, $regular);
+    font-style: italic;
+    color: $red;
+
+    &--on-err {
+      display: block;
+
+      margin-top: 0.6rem;
+      margin-bottom: -0.1rem;
+    }
+  }
+
+  &__submit-btn {
+    margin-bottom: 1.1rem;
+    padding-top: 1.6rem;
+    padding-bottom: 1.2rem;
+    width: 100%;
+
+    @include font(1.62rem, $semi-bold);
+    color: $white;
+    letter-spacing: 0.03rem;
+
+    border: none;
+    border-radius: 0.5rem;
+    background-color: $green;
+    box-shadow: 0 0.3rem $box-shadow-green;
+
+    &:hover {
+      background-color: $green-hover;
+      cursor: pointer;
     }
 
-    &__err-msg {
-        display: none;
-
-        @include font(1.07rem, $regular);
-        font-style: italic;
-        color: $red;
-
-        &--on-err {
-            display: block;
-
-            margin-top: .6rem;
-            margin-bottom: -.1rem;
-        }
+    &:focus-visible {
+      outline: none;
+      background-color: $green-hover;
     }
 
-    &__submit-btn {
-        margin-bottom: 1.1rem;
-        padding-top: 1.6rem;
-        padding-bottom: 1.2rem;
-        width: 100%;
-
-        @include font(1.62rem, $medium);
-        color: $white;
-        letter-spacing: .03rem;
-
-        border: none;
-        border-radius: .5rem;
-        background-color: $green;
-        box-shadow: 0 .3rem $box-shadow-green;
-
-        &:hover {
-            background-color: $green-hover;
-            cursor: pointer;
-        }
-
-        @media screen and (min-width: $breakpoint) {
-            margin-bottom: 1.5rem;
-        }
+    @media screen and (min-width: $breakpoint) {
+      margin-bottom: 1.5rem;
     }
+  }
 
-    &__terms-wrapper {
-        padding: 0 1.5rem;
+  &__terms-wrapper {
+    padding: 0 1.5rem;
 
-        text-align: center;
+    text-align: center;
+  }
+
+  &__terms {
+    @include font(1.1rem, $regular);
+    color: $grayish-blue;
+    line-height: 1.94;
+
+    &--emph {
+      font-weight: $semi-bold;
+      color: $red;
     }
-
-    &__terms {
-        @include font(1.1rem, $regular);
-        color: $grayish-blue;
-        line-height: 1.94;
-
-        &--emph {
-            font-weight: $semi-bold;
-            color: $red;
-        }
-    }
-
+  }
 }

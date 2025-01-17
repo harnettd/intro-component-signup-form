@@ -9,16 +9,7 @@ const emailAddress = document.querySelector('#email-address')
 const password = document.querySelector('#password')
 const inputs = [firstName, lastName, emailAddress, password]
 
-// On webpage load, clear all input values and remove all error 
-// indicators/massages.
-window.addEventListener('load', () => {
-  inputs.forEach((input) => {
-    input.value = ''
-    removeOnErr(input)    
-  })
-})
-
-// Return the relatives of one of the inputs.
+// Return the relevant relatives of one of the inputs.
 const getRelatives = (input) => {
   const container = input.parentElement
   const errIcon =  input.nextElementSibling
@@ -27,26 +18,50 @@ const getRelatives = (input) => {
 }
 
 const onErr = 'on-err'  //input-error BEM modifier
-
-const ModifiedClass = (element) => `${formBlock}__${element}--${onErr}`
+const onErrClass = (element) => `${formBlock}__${element}--${onErr}`
 
 // Add input-error modifiers to all elements associated with an input. 
 const addOnErr = (input) => {
   const {container, errIcon, errMessage} = getRelatives(input)
-  input.classList.add(ModifiedClass('input'))
-  container.classList.add(ModifiedClass('input-container-flex'))
-  errIcon.classList.add(ModifiedClass('err-icon'))    
-  errMessage.classList.add(ModifiedClass('err-msg')) 
+  input.classList.add(onErrClass('input'))
+  container.classList.add(onErrClass('input-container-flex'))
+  errIcon.classList.add(onErrClass('err-icon'))    
+  errMessage.classList.add(onErrClass('err-msg')) 
 }
 
 // Remove input-error modifiers from all elements associated with an input.
 const removeOnErr = (input) => {
   const {container, errIcon, errMessage} = getRelatives(input)
-  input.classList.remove(ModifiedClass('input'))
-  container.classList.remove(ModifiedClass('input-container-flex'))
-  errIcon.classList.remove(ModifiedClass('err-icon'))    
-  errMessage.classList.remove(ModifiedClass('err-msg')) 
+  input.classList.remove(onErrClass('input'))
+  container.classList.remove(onErrClass('input-container-flex'))
+  errIcon.classList.remove(onErrClass('err-icon'))    
+  errMessage.classList.remove(onErrClass('err-msg')) 
 }
+
+// On webpage load, clear all input values and remove all error 
+// indicators and messages.
+window.addEventListener('load', () => {
+  inputs.forEach((input) => {
+    input.value = ''
+    removeOnErr(input)    
+  })
+})
+
+// When an input has focus, add a corresponding class to its container.
+// When it loses focus, remove the class.
+inputs.forEach((input) => {
+  const focusClass = `${formBlock}__input-container-flex--subfocus`
+  const container = getRelatives(input).container
+  
+  input.addEventListener('focus', () => {
+    removeOnErr(input)
+    container.classList.add(focusClass)
+  })
+  
+  input.addEventListener('blur', () => {
+    container.classList.remove(focusClass)
+  })
+})
 
 // Return true if email is a valid email address; false otherwise.
 const isValidEmail = (email) => {
@@ -58,6 +73,7 @@ const isValidEmail = (email) => {
   return true
 }
 
+// When the form is submitted, perform some client-side input validation.
 form.addEventListener('submit', function(evt) {
   evt.preventDefault()
 
