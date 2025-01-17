@@ -9,7 +9,16 @@ html {
 
 body {
   margin: 0;
+  background-image: url("./images/bg-intro-mobile.png");
+  background-position: center top;
+  background-size: auto;
+  background-repeat: no-repeat;
   background-color: hsl(0, 100%, 74%);
+}
+@media screen and (min-width: 962px) {
+  body {
+    background-image: url("./images/bg-intro-desktop.png");
+  }
 }
 
 .container-flex {

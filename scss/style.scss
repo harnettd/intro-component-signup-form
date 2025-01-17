@@ -1,28 +1,35 @@
 @import "vars";
 
-
 // Base styles
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 * > * {
-    box-sizing: border-box;
-    margin-top: 0;
+  box-sizing: border-box;
+  margin-top: 0;
 }
 
 // TODO: add background
 body {
-    margin: 0;
-    background-color: $salmon;
-}
+  margin: 0;
+  background: {
+    image: url("./images/bg-intro-mobile.png");
+    position: center top;
+    size: auto;
+    repeat: no-repeat;
+    color: $salmon;
+  }
 
+  @media screen and (min-width: $breakpoint) {
+    background-image: url("./images/bg-intro-desktop.png");
+  }
+}
 
 // Layout styles
 
 @import "container-flex";
-
 
 // Blocks
 
@@ -30,7 +37,6 @@ body {
 @import "offer";
 @import "signup-form";
 @import "attribution";
-
 
 // Development run-level
 
