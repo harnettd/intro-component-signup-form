@@ -45,7 +45,6 @@
     width: 100%;
 
     @include font(1.45rem, $semi-bold);
-    // color: $black;
 
     @media screen and (min-width: $breakpoint) {
       font-size: 1.43rem;
