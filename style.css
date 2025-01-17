@@ -22,13 +22,13 @@ body {
   min-width: 32.8rem;
   width: 32.8rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 962px) {
   .container-flex {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 0;
-    margin: 0;
+    gap: 2rem;
+    margin: 0 2rem;
     width: 111rem;
   }
 }
@@ -39,22 +39,19 @@ body {
   align-items: flex-start;
   min-height: 100vh;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 962px) {
   .container-flex__wrapper {
     align-items: center;
   }
 }
-.container-flex__txt-col {
-  display: block;
-}
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 962px) {
   .container-flex__txt-col {
     max-width: 50rem;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 962px) {
   .container-flex__signup-col {
-    width: 54rem;
+    max-width: 54rem;
   }
 }
 
@@ -67,13 +64,13 @@ body {
   line-height: 1.31;
   text-align: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 962px) {
   .introduction__heading {
     margin-bottom: 3rem;
     margin-top: 1rem;
     font-size: 4.9rem;
-    text-align: left;
     line-height: 1.1;
+    text-align: left;
   }
 }
 .introduction__copy {
@@ -85,7 +82,7 @@ body {
   line-height: 1.64;
   text-align: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 962px) {
   .introduction__copy {
     font-size: 1.59rem;
     text-align: left;
@@ -99,22 +96,23 @@ body {
   color: hsl(0, 100%, 100%);
   line-height: 1.65;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 962px) {
   .offer {
+    padding-bottom: 1.5rem;
     font-size: 1.53rem;
   }
 }
 .offer__wrapper {
   margin-bottom: 2.4rem;
+  border: none;
+  border-radius: 1rem;
   padding: 2rem 8rem 1.7rem;
   width: 100%;
   text-align: center;
-  border: none;
-  border-radius: 1rem;
   background-color: hsl(248, 32%, 49%);
   box-shadow: 0 0.7rem hsla(0, 100%, 0%, 0.2);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 962px) {
   .offer__wrapper {
     padding-bottom: 1.5rem;
   }
@@ -130,7 +128,7 @@ body {
   background-color: hsl(0, 100%, 100%);
   box-shadow: 0 0.7rem hsla(0, 100%, 0%, 0.2);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 962px) {
   .signup-form {
     padding: 4.1rem;
   }
@@ -138,7 +136,7 @@ body {
 .signup-form__field {
   margin-bottom: 1.6rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 962px) {
   .signup-form__field {
     margin-bottom: 2rem;
   }
@@ -151,7 +149,7 @@ body {
   border: 0.1rem solid hsl(246, 25%, 77%);
   border-radius: 0.5rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 962px) {
   .signup-form__input-container-flex {
     padding: 1.6rem 2.5rem 1.5rem 2.9rem;
   }
@@ -166,7 +164,7 @@ body {
   font-weight: 600;
   border: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 962px) {
   .signup-form__input {
     font-size: 1.43rem;
   }
@@ -218,7 +216,7 @@ body {
   background-color: hsla(154, 59%, 51%, 0.8);
   cursor: pointer;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 962px) {
   .signup-form__submit-btn {
     margin-bottom: 1.5rem;
   }
@@ -246,23 +244,6 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
-
-body {
-  background-image: url("./design/mobile-design.jpg");
-  background-position: left top;
-  background-repeat: no-repeat;
-  background-size: auto;
-  opacity: 1;
-}
-@media screen and (min-width: 768px) {
-  body {
-    background-image: url("./design/desktop-design.jpg");
-  }
-}
-
-.container-flex {
-  margin-top: 0rem;
 }
 
 /*# sourceMappingURL=style.css.map */
