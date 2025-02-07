@@ -107,4 +107,4 @@ The key new ideas that I encountered on this project are HTML forms and client-s
 
 ## Acknowledgments
 
-As always, thanks to the people at [Frontend Mentor](https://www.frontendmentor.io) for posting this challenge.
+As always, thanks to the people at [Frontend Mentor](https://www.frontendmentor.io) for posting this challenge. Also, thanks to [@skyv26](https://www.frontendmentor.io/profile/skyv26) and [@markuslewin](https://www.frontendmentor.io/profile/markuslewin) for their helpful comments on my original submission.
