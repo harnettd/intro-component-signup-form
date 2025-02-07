@@ -51,16 +51,13 @@ This is the first Frontend Mentor project that I worked on that asked for signif
 
 ```js
 form.addEventListener("submit", function (evt) {
-  evt.preventDefault();
 
   if (firstName.value === "") {
     addOnErr(firstName);
   } else {
     removeOnErr(firstName);
   }
-
   ...
-
 }
 ```
 
@@ -69,11 +66,8 @@ It's also the first time that I needed to use regular expressions in JavaScript.
 ```js
 const isValidEmail = (email) => {
   const emailRegexp = /^\w+(\.\w+)*@\w+(\.\w+)*$/g;
-  if (email.match(emailRegexp) === null) {
-    return false;
-  }
-  return true;
-};
+  return email.value.match(emailRegexp) ? true : false;
+}
 ```
 
 Apparently, valid email addresses can be even more complicated than what's allowed for with the above regular expression, but this covers the vast majority of email addresses I've seen.
